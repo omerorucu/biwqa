@@ -1,0 +1,91 @@
+# This file contains metadata for the QGIS plugin.
+# It is required by the QGIS Plugin Repository.
+
+[general]
+
+# Plugin name
+name=BiWQA - Bitemporal Water Quality Analyzer
+
+# Minimum QGIS version
+qgisMinimumVersion=3.16
+
+# Maximum QGIS version (explicitly supports QGIS 4.x)
+qgisMaximumVersion=4.99
+
+# Short description (max 500 characters)
+description=A QGIS plugin for bitemporal analysis of surface water quality using remote sensing indices. Supports Chlorophyll-a (NDCI, 2-Band, Moses, Ensemble), Turbidity (NDTI, Dogliotti), CDOM, Secchi Depth, Trophic State Index (TSI), NDWI, and MNDWI. Classifies water quality parameters based on peer-reviewed thresholds and detects class-level changes between two time periods.
+
+about=BiWQA (Bitemporal Water Quality Analyzer) was developed with the assistance of DeepSeek AI and Claude AI (Anthropic).
+
+	BiWQA enables quantitative assessment of inland water body conditions using
+	Sentinel-2 derived raster indices. The plugin accepts two temporal raster
+	inputs per index (Time 1 and Time 2), applies scientifically validated
+	classification thresholds, computes a pixel-level bitemporal change map,
+	and summarizes the results in tabular and chart form. Outputs (classified
+	layers and change maps) are automatically added to the QGIS project.
+	The tool is designed for limnologists, environmental engineers, and GIS
+	practitioners working with lakes, reservoirs, and river systems.
+
+    Supported indices:
+    - Chlorophyll-a: Ensemble, NDCI (Mishra & Mishra 2012), 2-Band (Gitelson et al. 2008), Moses (Moses et al. 2012)
+    - Turbidity: NDTI, Dogliotti (Dogliotti et al. 2015)
+    - CDOM / Colored Dissolved Organic Matter
+    - Secchi Disk Depth (SDD)
+    - Trophic State Index (TSI - Carlson 1977)
+    - NDWI / MNDWI water extent indices
+
+    Workflow:
+    1. Load Time-1 and Time-2 raster files for each index
+    2. Run the bitemporal change analysis
+    3. Inspect statistics and change matrix in the results panel
+    4. Export results as CSV or view classified layers directly in QGIS
+
+version=1.1.0
+author=Omer K. ORUCU
+email=omerorucu@sdu.edu.tr
+
+# Optional metadata
+homepage=https://github.com/omerorucu/biwqa
+tracker=https://github.com/omerorucu/biwqa/issues
+repository=https://github.com/omerorucu/biwqa
+
+# Tags for the plugin repository search
+tags=water quality, remote sensing, bitemporal, change detection, chlorophyll, turbidity, Sentinel-2, limnology, raster analysis, trophic state, NDCI, NDTI, NDWI, inland water, lake, reservoir, biwqa
+
+# Icon file (place icon.png in the plugin root directory)
+icon=icon.png
+
+# Experimental flag
+experimental=False
+
+# Deprecated flag
+deprecated=False
+
+# Category
+category=Raster
+
+# Plugin dependencies
+plugin_dependencies=
+
+# Changelog
+changelog=
+    1.1.0 (2026)
+    - Renamed to BiWQA - Bitemporal Water Quality Analyzer
+    - QGIS 4.0 full compatibility (PyQt6, Qgis.MessageLevel enum, exec())
+    - Configurable pixel size (QDoubleSpinBox)
+    - Automatic temp-file tracking and cleanup on close
+    - MNDWI band-2 water masking in load_and_classify()
+    - Cohen's Kappa coefficient displayed in results tables and reports
+    - Provenance JSON export (ISO 19115-inspired) alongside CSV results
+    - Sensitivity analysis run automatically and shown in summary
+    - Vectorized change-matrix (np.bincount) -- up to 100x faster
+    - uint16 change-map (halved memory vs int32)
+    - Weighted ensemble helper for Chl-a (inverse-variance weighting)
+
+    1.0.0 (2025)
+    - Initial public release as Water Quality Temporal Change Analyzer
+    - Multi-index temporal change analysis (Chl-a, Turbidity, CDOM, Secchi, TSI, NDWI, MNDWI)
+    - Pixel-level change map generation and QGIS layer integration
+    - Change statistics table with area (km2) and percentage summaries
+    - CSV export functionality
+    - Multi-threaded analysis to keep QGIS UI responsive
