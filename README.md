@@ -1,5 +1,7 @@
 # BiWQA — Bitemporal Water Quality Analyzer
 
+<img src="assets/biwqa_logo.png" alt="BiWQA logo" width="128" align="right">
+
 **BiWQA** is a QGIS plugin for bitemporal analysis of surface water quality
 using remote sensing indices. It applies peer-reviewed classification
 thresholds and quantifies class-level change between two time periods.
@@ -115,7 +117,12 @@ biwqa/
 ├── change_analyzer.py                     # Change detection, Kappa, uncertainty
 ├── classification_rules_water_quality.py  # Index thresholds and class definitions
 ├── metadata.txt                           # QGIS plugin metadata
+├── icon.png                               # Toolbar icon (256 px)
 ├── LICENSE                                # GNU GPL v3
+├── assets/
+│   ├── biwqa_logo.png                     # Logo for README / slides (512 px)
+│   ├── biwqa_icon_128.png                 # Toolbar icon, small variant
+│   └── make_icon.py                       # Script that draws both (Pillow)
 └── gee/
     ├── lake_water_quality_gee.js          # Earth Engine script (ESM_2 of the paper)
     └── README.md                          # How to run it, band list, limitations
