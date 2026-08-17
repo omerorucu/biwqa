@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.dll
+*.pyd
+.Python
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# QGIS specific
+*.qgz
+*.qgs
+*.qgs~
+*.qml
+*.qpt
+
+# Temporary files (BiWQA creates these in system temp)
+*.tif
+*.tiff
+*.tmp
+temp_*
+
+# Logs and outputs
+*.log
+*.csv
+*.json
+*.txt
+biwqa_analysis_*/
+
+# ...but these must stay in the repository
+!metadata.txt
+!LICENSE
+!requirements.txt
+
+# OS metadata
+Thumbs.db
+desktop.ini
+
+# Packaging / zip
+*.zip
+*.tar.gz
+
+# Environment (if any)
+.env
+venv/
+env/
+ENV/

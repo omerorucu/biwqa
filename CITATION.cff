@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+title: BiWQA — Bitemporal Water Quality Analyzer
+message: >-
+  If you use this software, please cite both the software and the
+  associated journal article.
+type: software
+authors:
+  - family-names: Örücü
+    given-names: Ömer Kamil
+    orcid: https://orcid.org/0000-0002-2162-7553
+    affiliation: >-
+      Department of Landscape Architecture, Faculty of Architecture,
+      Süleyman Demirel University, Isparta, Türkiye
+repository-code: https://github.com/omerorucu/biwqa
+license: GPL-3.0-or-later
+version: 1.1.0
+keywords:
+  - QGIS plugin
+  - water quality
+  - remote sensing
+  - change detection
+  - chlorophyll-a
+  - trophic state index
+  - Sentinel-2
+  - Google Earth Engine
+preferred-citation:
+  type: article
+  title: >-
+    Landscape-based assessment of trophic shift: integrating remote sensing
+    for sustainable management of Lake Beyşehir
+  authors:
+    - family-names: Örücü
+      given-names: Ömer Kamil
+      orcid: https://orcid.org/0000-0002-2162-7553
+    - family-names: Örücü
+      given-names: Seda
+  journal: International Journal of Environmental Science and Technology
+  volume: 23
+  issue: 554
+  year: 2026
+  doi: 10.1007/s13762-026-07323-w
